@@ -1,0 +1,26 @@
+/* 1. Abstract configuration rules */
+@import "./abstract/variables.css";
+
+/* 2. Low-level base configurations */
+@import "./base/reset.css";
+@import "./base/typography.css";
+@import "./base/utility.css";
+
+/* 3. Structural layouts */
+@import "./layout/grid.css";
+@import "./layout/header.css";
+@import "./layout/footer.css";
+
+/* 4. Isolated UI Components */
+@import "./components/nav.css";
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/forms.css";
+
+@import "./components/animations.css";
+
+/* 5. Page overrides */
+@import "./pages/home.css";
+@import "./pages/projects.css";
+
+@import './base/responsive.css'; /* must be last */

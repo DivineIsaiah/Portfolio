@@ -1,0 +1,96 @@
+/* footer */
+
+#footer{
+  background: hsl(var(--main-bg-color));
+  color: hsl(var(--light-text));
+  padding: var(--footer-padding-y) var(--footer-padding-x);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--footer-gap-columns);
+}
+
+.footer__wrapper > * {
+  flex: 1 1 100%;
+}
+
+.footer__logo{
+    display: grid;
+    place-items: center;
+}
+
+.footer__logo-text{
+    font-weight: 600;
+    font-size: var(--font-size-section-header);
+    background: linear-gradient(
+    90deg,
+    hsl(var(--yellow-bg)),
+    hsl(var(--orange-text))
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.footer__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--flex-gap-nav);
+}
+
+.footer__logo, .footer__nav{
+    flex: 1 1 100%;
+}
+
+.footer__nav-link{
+    font-weight: 500;
+    color: hsl(var(--light-text)/0.5);
+    transition: all var(--transition-fast);
+}
+
+.footer__nav-link:hover{
+    color: hsl(var(--orange-text)/0.5);
+}
+
+.footer__socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--flex-gap-nav);
+}
+
+.footer__social-link{
+    width: var(--spacing-9);
+    height: var(--spacing-9);
+    padding: var(--spacing-2);
+    border-radius: var(--border-radius-full);
+    border: 1px solid hsl(var(--orange-bg)/0.1);
+    background: hsl(var(--orange-bg));
+    transition: all var(--transition-fast);
+}
+
+.footer__social-link:hover{
+    background: hsl(var(--orange-bg)/0.08);
+    transform: scale(1.1);
+    border: 1px solid hsl(var(--orange-bg)/0.3);
+}
+
+.footer__social-icon{
+    width: 100%;
+    border-radius: var(--border-radius-full);
+    background-color: hsl(var(--light-bg-color));
+    transition: all var(--transition-fast);
+}
+
+.footer__copyright{
+    color: hsl(var(--light-text)/0.5);
+    font-weight: 400;
+    font-size: var(--font-size-small);
+
+}

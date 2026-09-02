@@ -1,0 +1,275 @@
+/* ============================================
+   RESPONSIVE STYLES
+   Save as: src/css/base/responsive.css
+   Import in main.css LAST, after all other imports
+   ============================================ */
+
+
+/* ============================================
+   BREAKPOINTS USED
+   --tablet:  max-width: 1024px
+   --mobile:  max-width: 768px
+   --small:   max-width: 480px
+   ============================================ */
+
+
+/* ============================================
+   TABLET — 1024px and below
+   ============================================ */
+@media (max-width: 1024px) {
+
+    /* ---- Global spacing relief ---- */
+    :root {
+        --section-padding-x: var(--spacing-8);
+        --section-padding-y: var(--spacing-8);
+        --footer-padding-x: var(--spacing-8);
+        --footer-padding-y: var(--spacing-8);
+    }
+
+    /* ---- Navbar ---- */
+    .nav-bar__links {
+        display: none; /* hide the middle nav links, keep logo + actions */
+    }
+
+    /* ---- Hero ---- */
+    .hero__img-box {
+        min-height: 45vh;
+    }
+
+    /* ---- Projects ---- */
+    .project__card {
+        flex-direction: column; /* stack image above content */
+    }
+
+    .project__img-box {
+        min-width: unset;
+        min-height: 28rem;
+        flex: 0 0 auto;
+    }
+
+    /* ---- Services ---- */
+    .services__inner {
+        grid-template-columns: 1fr; /* one card per row */
+    }
+
+    /* ---- Tools ---- */
+    .tools__category.is-active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---- Contact ---- */
+    .contact__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__info {
+        gap: var(--flex-gap-row);
+    }
+}
+
+
+/* ============================================
+   MOBILE — 768px and below
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* ---- Global spacing relief ---- */
+    :root {
+        --section-padding-x: var(--spacing-5);
+        --section-padding-y: var(--spacing-7);
+        --footer-padding-x: var(--spacing-5);
+        --footer-padding-y: var(--spacing-7);
+        --flex-gap-col: var(--spacing-6);
+        --section-gap: var(--spacing-7);
+    }
+
+    /* ---- Typography scale down ---- */
+    :root {
+        --font-size-lg: 5rem;
+        --font-size-header: 3.2rem;
+        --font-size-section-header: 2.4rem;
+    }
+
+    /* ---- Navbar ---- */
+    .nav-bar {
+        top: 12px;
+        width: calc(100% - var(--spacing-5) * 2);
+    }
+
+    .nav-bar__links {
+        display: none;
+    }
+
+    .nav-bar__actions {
+        gap: var(--spacing-3);
+    }
+
+    a.nav-bar__action {
+        padding: var(--nav-btn-padding-y) var(--spacing-4);
+        font-size: 1.4rem;
+    }
+
+    /* ---- Hero ---- */
+    .hero__img-box {
+        min-height: 38vh;
+    }
+
+    .hero__img-text-wrapper {
+        width: max-content;
+        padding: var(--spacing-2) var(--spacing-4);
+    }
+
+    .hero__text {
+        font-size: var(--font-size-header);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-4);
+    }
+
+    .hero__cta, .hero__cta-primary {
+        width: 100%;
+        text-align: center;
+        padding: var(--button-padding-y) var(--spacing-6);
+    }
+
+    /* ---- Journey / About ---- */
+    .journey__wrapper {
+        flex-direction: column;
+        gap: var(--spacing-6);
+    }
+
+    .journey__head {
+        position: static; /* unstick — sticky h1 in a column layout looks wrong */
+    }
+
+    .journey__timeline::before {
+        left: 1.95rem; /* recenters the line with the smaller dot on mobile */
+    }
+
+    /* ---- Projects ---- */
+    .project__card {
+        flex-direction: column;
+    }
+
+    .project__img-box {
+        min-height: 22rem;
+        padding: var(--card-padding);
+    }
+
+    .project__content {
+        padding: var(--card-padding);
+    }
+
+    .project__stats {
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+
+    .project__stat {
+        flex-direction: row;
+        gap: var(--spacing-3);
+    }
+
+    /* ---- Services ---- */
+    .services__inner {
+        grid-template-columns: 1fr;
+    }
+
+    /* ---- Tools ---- */
+    .tools__nav {
+        justify-content: flex-start;
+        gap: var(--spacing-3);
+    }
+
+    .tools__nav-link {
+        padding: var(--spacing-3) var(--spacing-4);
+        font-size: 1.4rem;
+    }
+
+    .tools__category.is-active {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+    }
+
+    /* ---- Contact ---- */
+    .contact__inner {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+
+    .contact__title {
+        font-size: var(--font-size-section-header);
+    }
+
+    /* ---- Footer ---- */
+    .footer__nav {
+        flex-wrap: wrap;
+        gap: var(--spacing-4);
+        justify-content: center;
+    }
+
+    .footer__socials {
+        gap: var(--spacing-4);
+    }
+}
+
+
+/* ============================================
+   SMALL — 480px and below
+   ============================================ */
+@media (max-width: 480px) {
+
+    /* ---- Global spacing ---- */
+    :root {
+        --section-padding-x: var(--spacing-4);
+        --button-padding-x: var(--spacing-4);
+    }
+
+    /* ---- Navbar ---- */
+    .nav-bar__actions {
+        gap: var(--spacing-2);
+    }
+
+    /* hide the secondary action on very small screens, keep primary CTA */
+    a.nav-bar__action:not(.nav-bar__action-primary) {
+        display: none;
+    }
+
+    /* ---- Hero ---- */
+    .hero__img-box {
+        min-height: 30vh;
+    }
+
+    /* ---- Projects ---- */
+    .project__stack {
+        gap: var(--spacing-2);
+    }
+
+    .project__stack-item {
+        font-size: 1.2rem;
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+
+    .project__stat-value {
+        font-size: var(--font-size-section-header);
+    }
+
+    /* ---- Tools ---- */
+    .tools__category.is-active {
+        grid-template-columns: 1fr; /* single column on very small screens */
+    }
+
+    /* ---- Footer ---- */
+    .footer__nav {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-3);
+    }
+
+    .footer__logo-text {
+        font-size: var(--font-size-sub-header);
+    }
+}
