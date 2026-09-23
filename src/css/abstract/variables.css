@@ -55,7 +55,7 @@
       --font-size-small: 1.2rem;
 
       --font-family-primary: Lexend;
-      --font-family-secondary: lexend;
+      --font-family-secondary: 'Lexend', Lora, Nunito Sans, Inter Tight, sans-serif;
 
       /* ============================================
          SPACING SCALE

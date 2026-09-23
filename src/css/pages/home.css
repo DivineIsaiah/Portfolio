@@ -250,6 +250,20 @@
     background-color: hsl(var(--alt-bg-color));
     border: 1px solid hsl(var(--orange-bg)/0.2);
     border-radius: var(--border-radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.project__card:hover{
+    border-color: hsl(var(--color-orange)/0.8)
+}
+
+.project__card:hover .project__title {
+    color: hsl(var(--color-orange))
+}
+
+.project__card:hover .project__stack-item{
+    background-color: hsl(var(--color-orange)/0.8);
+    color: hsl(var(--color-white)/0.8);
 }
 
 .project__img-box{
@@ -283,13 +297,20 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: var(--flex-gap-col);
+    gap: var(--spacing-7);
 }
 
 .project__title{
     color: hsl(var(--light-text));
     font-size: var(--font-size-section-header);
+    transition: all var(--transition-normal);
 }
+
+.project__type{
+    color: hsl(var(--light-text));
+    font-size: var(--font-size-sub-header);
+}
+
 
 .project__stack{
     display: flex;
@@ -306,6 +327,7 @@
     border: 1px solid hsl(var(--alt-bg-color));
     border-radius: var(--border-radius-lg);
     margin-top: var(--spacing-4);
+    transition: all var(--transition-normal);
 }
 
 
@@ -570,24 +592,24 @@
 
 }
 
-.tools__nav-link{
+.tools__nav-link {
     padding: var(--button-padding-y) var(--button-padding-x);
-    color: hsl(var(--light-text)/0.5);
+    color: hsl(var(--light-text) / 0.5);
     background: none;
-    border: 1px solid hsl(var(--orange-bg)/0.1);
+    border: 1px solid hsl(var(--orange-bg) / 0.1);
     border-radius: var(--border-radius-lg);
     transition: all var(--transition-normal);
 }
 
-.tools__nav-link:hover{
-    color: hsl(var(--light-text)/0.9);
-    border: 1px solid hsl(var(--light-text)/0.5);
+.tools__nav-link:hover {
+    color: hsl(var(--light-text) / 0.9);
+    border-color: hsl(var(--light-text) / 0.5);
 }
 
-.tools__nav-link.is-active{
+.tools__nav-link.is-active {
     background: hsl(var(--orange-bg));
     color: hsl(var(--light-text));
-    border: none;
+    border-color: hsl(var(--orange-bg));
 }
 
 .tools__category{
