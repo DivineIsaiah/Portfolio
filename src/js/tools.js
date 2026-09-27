@@ -43,3 +43,23 @@ export function initToolsSection() {
         defaultLink.click();
     }
 }
+
+const journeyItems = document.querySelectorAll('.journey__item');
+
+const observerOptions = {
+  root: null,
+  rootMargin: '-10% 0px -70% 0px',
+  threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('journey__item--active');
+    } else {
+      entry.target.classList.remove('journey__item--active');
+    }
+  });
+}, observerOptions);
+
+journeyItems.forEach((item) => observer.observe(item));

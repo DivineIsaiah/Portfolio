@@ -123,6 +123,7 @@
 
 
 
+
 /* about me section */
 
 #journey{
@@ -175,6 +176,19 @@
 }
 
 
+.journey__item--active .journey__dot {
+    background: hsl(var(--orange-text));
+}
+
+.journey__item--active .journey__content {
+    border-color: hsl(var(--orange-text));
+}
+
+.journey__item--active .journey__heading {
+    color: hsl(var(--orange-text));
+    transition: color var(--transition-normal);
+}
+
 .journey__marker {
     position: relative;
     flex: 0 0 auto;
@@ -195,6 +209,10 @@
     transition: border-color var(--transition-normal), background-color var(--transition-normal);
 }
 
+/* .journey__dot--active {
+    background: hsl(var(--orange-text));
+} */
+
 .journey__content {
   flex: 1 1 auto;
   padding: var(--card-padding);
@@ -204,6 +222,7 @@
   border: 1px solid hsl(var(--main-bg-color));
   border-radius: var(--border-radius-lg);
   max-width: var(--spacing-16);
+  transition: border-color var(--transition-normal);
 }
 
 .journey__heading {
@@ -215,6 +234,16 @@
 .journey__text {
   color: hsl(var(--dark-btn-text)/0.8);
 }
+
+.journey__trigger {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 1px;
+}
+
+
+
 
 /* my projects section */
 
@@ -403,7 +432,7 @@
     0 0 0 18px hsl(var(--orange-text) / 0.04);
 }
 
-.projects__actions{
+/* .projects__actions{
     width: 100%;
     display: grid;
     place-items: center;
@@ -431,7 +460,7 @@
     background-color: hsl(var(--alt-light-text)/0.07);
     color: hsl(var(--alt-light-text));
     border: 1px solid hsl(var(--alt-light-text));
-}
+} */
 
 
 /* services section */
