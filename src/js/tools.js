@@ -63,3 +63,4 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 journeyItems.forEach((item) => observer.observe(item));
+

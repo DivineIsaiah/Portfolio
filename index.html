@@ -25,7 +25,7 @@
                     <ul class="nav-bar__links-list">
                     <li><a href="#journey" class="nav-bar__link">About Me</a></li>
                     <li><a href="#projects" class="nav-bar__link">My Work</a></li>
-                    <li><a href="#services" class="nav-bar__link">Services</a></li>
+                    <li><a href="#services" class="nav-bar__link">Engineering</a></li>
                     <li><a href="#tools" class="nav-bar__link">My Stack</a></li>
                     </ul>
                 </div>
@@ -60,7 +60,7 @@
                     </h1>
                 
                     <div class="hero__actions">
-                        <a href="#contact-me" class="hero__cta-primary">
+                        <a href="#projects" class="hero__cta-primary">
                             View My Work
                         </a>
                         <a href="/projects.html" class="hero__cta">
@@ -179,7 +179,7 @@
                                 </div>
 
                                 <div class="project__cta">
-                                    <a class="project__link" href="">
+                                    <a class="project__link" target="_blank" href="https://divineisaiah.github.io/Suden/">
                                         See the Website
                                     </a>
                                 </div>
@@ -228,7 +228,7 @@
                                 </div>
 
                                 <div class="project__cta">
-                                    <a class="project__link" href="https://github.com/DivineIsaiah/Suden.git" target="_blank">
+                                    <a class="project__link" href="https://expresacademy.com/" target="_blank">
                                         View Company Website
                                     </a>
                                 </div>
@@ -277,7 +277,7 @@
                                 </div>
 
                                 <div class="project__cta">
-                                    <a class="project__link" href="">
+                                    <a class="project__link" target="_blank" href="https://divineisaiah.github.io/Homify/">
                                         View Project · GitHub
                                     </a>
                                 </div>
@@ -327,7 +327,7 @@
                                 </div>
 
                                 <div class="project__cta">
-                                    <a class="project__link" href="">
+                                    <a class="project__link" target="_blank" href="https://alison.com/course-creators/divine-isaiah">
                                         See my Courses
                                     </a>
                                 </div>
@@ -388,7 +388,7 @@
 
                         <div class="service__content service__action">
                             <div class="service__action-inner">
-                                <a class="service__action-link" href="#work">
+                                <a class="service__action-link" href="#projects">
                                     View My Work
                                 </a>
                                 <img class="service__link-icon" src="" alt="">
@@ -434,7 +434,7 @@
 
                         <div class="service__content service__action">
                             <div class="service__action-inner">
-                                <a class="service__action-link" href="#work">
+                                <a class="service__action-link" target="_blank" href="https://github.com/DivineIsaiah">
                                     View My Work
                                 </a>
                                 <img class="service__link-icon" src="" alt="">
@@ -480,7 +480,7 @@
 
                         <div class="service__content service__action">
                             <div class="service__action-inner">
-                                <a class="service__action-link" href="#work">
+                                <a class="service__action-link" target="_blank" href="https://github.com/DivineIsaiah">
                                     View Web Work
                                 </a>
                                 <img class="service__link-icon" src="" alt="">
@@ -644,22 +644,47 @@
                     </div>
 
                     <div class="contact__form-wrap">
-                        <form class="contact__form" action="">
+
+                        <form class="contact__form" id="contact-form">
                             <label class="contact__label" for="name">
                                 Name
-                                <input class="contact__input" type="text" id="name" placeholder="Philip Doe">
+                                <input 
+                                    class="contact__input" 
+                                    type="text" 
+                                    id="name" 
+                                    name="name"
+                                    placeholder="Philip Doe"
+                                    required
+                                >
                             </label>
+
                             <label class="contact__label" for="email">
                                 Email
-                                <input class="contact__input" type="email" id="email" placeholder="Philip@myemail.com">
+                                <input 
+                                    class="contact__input" 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    placeholder="Philip@myemail.com"
+                                    required
+                                >
                             </label>
+
                             <label class="contact__label" for="message">
                                 Message
-                                <textarea class="contact__textarea" name="message" id="message" rows="5" placeholder="Tell me about the role or opportunity..."></textarea>
+                                <textarea 
+                                    class="contact__textarea" 
+                                    name="message" 
+                                    id="message" 
+                                    rows="5" 
+                                    placeholder="Tell me about the role or opportunity..."
+                                    required
+                                ></textarea>
                             </label>
 
                             <input class="contact__submit" type="submit" value="Get In Touch">
                         </form>
+
                     </div>
 
                 </div>
@@ -684,13 +709,13 @@
             </div>
 
             <div class="footer__socials">
-                <a href="" class="footer__social-link">
+                <a href="https://github.com/DivineIsaiah" target="_blank" class="footer__social-link">
                     <img src="/src/assets/icons/socials/github-142-svgrepo-com.svg" alt="Github" class="footer__social-icon">
                 </a>
-                <a href="" class="footer__social-link">
+                <a href="https://www.linkedin.com/in/divine-isaiah-a91940236/" target="_blank" class="footer__social-link">
                     <img src="/src/assets/icons/socials/linkedin-round-svgrepo-com.svg" alt="LinkedIn" class="footer__social-icon">
                 </a>
-                <a href="" class="footer__social-link">
+                <a href="https://x.com/DivineIsai82385" target="_blank" class="footer__social-link">
                     <img src="/src/assets/icons/socials/twitter-2-svgrepo-com.svg" alt="Twitter" class="footer__social-icon">
                 </a>
             </div>
