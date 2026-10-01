@@ -1,24 +1,50 @@
 export function initContactForm() {
     const form = document.getElementById("contact-form");
-
     if (!form) return;
 
-    form.addEventListener("submit", function (event) {
+    const button = form.querySelector(".contact__submit");
+
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+        const originalLabel = button.value;
+        button.value = "Sending...";
+        button.disabled = true;
 
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+        const data = {
+            access_key: "YOUR_ACCESS_KEY_HERE",
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+            subject: `Portfolio Contact from ${form.name.value}`,
+            replyto: form.email.value
+        };
 
-        const body = encodeURIComponent(
-            `Name: ${name}\n` +
-            `Email: ${email}\n\n` +
-            `Message:\n${message}`
-        );
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
 
-        window.location.href =
-            `mailto:divindeveloper@gmail.com?subject=${subject}&body=${body}`;
+            const result = await response.json();
+
+            if (result.success) {
+                form.reset();
+                button.value = "Message Sent!";
+            } else {
+                button.value = "Something went wrong";
+            }
+        } catch (error) {
+            button.value = "Something went wrong";
+        }
+
+        setTimeout(() => {
+            button.value = originalLabel;
+            button.disabled = false;
+        }, 3000);
     });
 }
